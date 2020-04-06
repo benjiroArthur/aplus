@@ -1,0 +1,29 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~admin-lte/dist/css/adminlte.css';
+
+//font awesome
+$fa-font-path: "../webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css";
+
+
+//mdi
+@import '~@mdi/font/scss/materialdesignicons';
+
+//custom css
+@import 'mystyle';
+
+.router-link-exact-active{
+    background-color: #055cb4 !important;
+    color: white !important;
+}
