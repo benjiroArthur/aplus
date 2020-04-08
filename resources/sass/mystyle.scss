@@ -179,14 +179,16 @@ h2
 
 .myNav:hover
 {
-    background-color: #00b44e;
-    color: white !important;
+    border-bottom: 2px solid #1EB40C;
+    //color: white !important;
 
 }
-.myNav a:hover
+.myNav
 {
-    color: white;
+    color: #1EB40C !important;
+    font-size: large !important;
 }
+
 
 .formBox
 {
@@ -201,7 +203,7 @@ h2
     border: none;
     outline: none;
     color: #fff;
-    background-color: #09378c !important;
+    background-color: #1EB40C !important;
     cursor: pointer;
     border-radius: 10px;
 }
@@ -258,8 +260,8 @@ h2
     background-color: #09378c !important;
 }
 
-.text-trip{
-    color: #00b44e;
+.text-aplus{
+    color: #1EB40C !important;
 }
 
 .bg-none{
@@ -280,31 +282,31 @@ h2
     }
 }
 
-.bg-trip{
-    background-color: #00b44e;
-  color: white;
+.bg-aplus{
+    background-color: #1EB40C !important;
+  color: white !important;
 }
 .bg-black{
     background-color: #000000;
 }
 
 .form-control:focus{
-    border-color:#00b44e !important;
+    border-color:#1EB40C !important;
     outline:0;
     box-shadow:inset 0 0 0 transparent
 }
 
 select.form-control:focus::-ms-value{
-    color:#00b44e !important;
-    border-color:#00b44e !important;
+    color:#1EB40C !important;
+    border-color:#1EB40C !important;
     background-color:#fff}
 
 select option{
-  box-shadow: inset #00b44e !important;
+  box-shadow: inset #1EB40C !important;
 }
 
 select option:hover{
-  background-color:#00b44e !important;
+  background-color:#1EB40C !important;
 }
 
 .myPss{
@@ -320,6 +322,16 @@ select option:hover{
 }
 .myLoadDiv3{
 padding-left: 20%;
+}
+
+.banner-height{
+    min-height: 700px !important;
+}
+.banner-info{
+    background: rgba(2, 5, 1, .5) !important;
+    color: white !important;
+    border-radius: 30px !important;
+
 }
 
 

@@ -7,11 +7,54 @@ window._ = require('lodash');
  */
 
 try {
-    window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
-
+    window.Popper = require('popper.js').default;
+    //require('./plugins/wow.min');
     require('bootstrap');
+    require('admin-lte');
+    require('./plugins/jquery.magnific-popup.min');
+
+
+    //require('./plugins/jquery.slicknav.min');
+
+    /*require('./plugins/jquery.scrollUp.min');
+    require('./plugins/jquery.ajaxchimp.min');
+    require('./plugins/jquery.counterup.min');
+    require('./plugins/jquery.form');
+    require('./plugins/jquery.magnific-popup.min');
+    require('./plugins/jquery.validate.min');
+
+    require('./modernizr-3.5.0.min');
+    require('./plugins/main');
+    require('./plugins/ajax-form');
+    require('./plugins/contact');
+    require('./plugins/gijgo.min');
+    require('./plugins/imagesloaded.pkgd.min');
+    require('./plugins/isotope.pkgd.min');
+    require('./plugins/mail-script');
+    require('./plugins/nice-select.min');
+    require('./plugins/owl.carousel.min');
+    require('./plugins/plugins');
+    require('./plugins/popper.min');
+    require('./plugins/scrollIt');
+    require('./plugins/slick.min');
+    require('./plugins/waypoints.min');*/
+
 } catch (e) {}
+
+
+$(window).on('scroll', function () {
+    var scroll = $(window).scrollTop();
+    if (scroll < 400) {
+        $("#sticky-header").removeClass("sticky");
+        $("#logo-mini").addClass("d-none");
+        $('#back-top').fadeIn(500);
+    } else {
+        $("#sticky-header").addClass("sticky");
+        $("#logo-mini").removeClass("d-none");
+        $('#back-top').fadeIn(500);
+    }
+});
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

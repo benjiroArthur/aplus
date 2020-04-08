@@ -15,6 +15,10 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->string('product_srn');
+            $table->string('name');
+            $table->string('price');
+            $table->boolean('in_stock')->default(1);
             $table->timestamps();
         });
     }

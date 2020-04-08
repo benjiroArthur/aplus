@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import 'variables';
+@import '__variables';
+
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -19,11 +20,16 @@ $fa-font-path: "../webfonts";
 
 //mdi
 @import '~@mdi/font/scss/materialdesignicons';
+@import '~bootstrap-vue/src/index.scss';
 
 //custom css
 @import 'mystyle';
+@import 'style';
+
+
 
 .router-link-exact-active{
-    background-color: #055cb4 !important;
-    color: white !important;
+    //background-color: #1EB40C !important;
+    //color: white !important;
+    border-bottom: 2px solid #1EB40C;
 }

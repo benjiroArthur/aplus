@@ -9,8 +9,8 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -21,11 +21,12 @@
 </head>
 <body class="hold-transition layout-top-nav">
     <div class="wrapper" id="app">
-        @include('includes.navbar')
-
+        @include('includes.nav')
+{{--        @include('includes.slider')--}}
+            <slider></slider>
         <div class="content-wrapper bodyColour">
             <div class="content" v-cloak>
-                <div class="container-fluid mt-3">
+                <div class="container-fluid">
                     @include('includes.messages')
 
                     <router-view>
@@ -48,5 +49,11 @@
         </div>
 
     </div>
+    <!-- Scripts -->
+    <script src="{{ asset('jquery.min.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+    </script>
+@yield('script')
 </body>
 </html>

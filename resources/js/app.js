@@ -4,7 +4,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+//require('./jquery-1.12.4.min');
+
 require('./bootstrap');
+
 
 window.Vue = require('vue');
 require('@fortawesome/fontawesome-free/js/all.js');
@@ -54,6 +57,12 @@ jQuery.extend(true, jQuery.fn.datetimepicker.defaults,{
 
 import Swal from 'sweetalert2';
 window.Swal = Swal;
+
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+// Install BootstrapVue
+Vue.use(BootstrapVue);
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin);
 
 
 const Toast = Swal.mixin({
@@ -106,6 +115,8 @@ Vue.component(VueCropper);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('customer-register', require('./components/Users/CustomerRegister.vue').default);
+Vue.component('slider', require('./components/Slider.vue').default);
 let routes = [
     {path:'/', component: require('./components/Welcome.vue').default},
     {path:'/about', component: require('./components/Users/About.vue').default},
