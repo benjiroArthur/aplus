@@ -21,34 +21,38 @@
 </head>
 <body class="hold-transition layout-top-nav">
     <div class="wrapper" id="app">
-        @include('includes.nav')
-{{--        @include('includes.slider')--}}
-            <slider></slider>
-        <div class="content-wrapper bodyColour">
-            <div class="content" v-cloak>
-                <div class="container-fluid">
-                    @include('includes.messages')
+       <div v-cloak>
+           @include('includes.nav')
+           <slider></slider>
+           <div class="content-wrapper bodyColour">
+               <div class="content">
+                   <div class="container-fluid">
+                       @include('includes.messages')
 
-                    <router-view>
-                        {{--Vue elements goes here--}}
-                    </router-view>
-                    <vue-progress-bar></vue-progress-bar>
-                </div>
+                       <router-view>
+                           {{--Vue elements goes here--}}
+                       </router-view>
+                       <vue-progress-bar></vue-progress-bar>
+                   </div>
 
-            </div>
+               </div>
 
+
+
+           </div>
+       </div>
 
         <div class="animated slower myLoadDiv1" :class="true ? 'zoomOut':''" v-if="pageLoader">
             <div class="myLoadDiv2 row">
-                <div class="justify-content-center myLoadDiv3 col-sm-12 ">
-                    <img src="{{asset('assets/images/trip.gif')}}" alt="A-PLUS" height="auto" width="auto" class="animated fadeInDown img-fluid">
+                <div class="align-content-center col-md-12 ">
+{{--                    <img src="{{asset('assets/resourceImages/logo-loader.png')}}" alt="A-PLUS" height="auto" width="400" class="animated fadeInDown img-fluid">--}}
                 </div>
 
             </div>
         </div>
-        </div>
-
     </div>
+
+
     <!-- Scripts -->
     <script src="{{ asset('jquery.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>

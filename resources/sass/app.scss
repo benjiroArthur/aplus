@@ -31,5 +31,15 @@ $fa-font-path: "../webfonts";
 .router-link-exact-active{
     //background-color: #1EB40C !important;
     //color: white !important;
-    border-bottom: 2px solid #1EB40C;
+    border-bottom: 2px solid #1EB40C !important;
+}
+
+.carousel-caption{
+    background-color: rgba(1, 1, 1, .5) !important;
+    color: white !important;
+    border-radius: 30px;
+}
+.carousel-caption p,
+.carousel-caption h3{
+    color: white !important;
 }

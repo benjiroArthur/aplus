@@ -71890,18 +71890,17 @@ select option:hover {
   background-color: #ffffff;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: 40%;
   position: fixed;
-  left: 0;
+  left: 20%;
 }
 
 .myLoadDiv2 {
-  margin: auto;
   width: 100%;
 }
 
 .myLoadDiv3 {
-  padding-left: 20%;
+  padding-left: 45%;
 }
 
 .banner-height {
@@ -77371,6 +77370,17 @@ h6 {
 }
 
 .router-link-exact-active {
-  border-bottom: 2px solid #1EB40C;
+  border-bottom: 2px solid #1EB40C !important;
+}
+
+.carousel-caption {
+  background-color: rgba(1, 1, 1, 0.5) !important;
+  color: white !important;
+  border-radius: 30px;
+}
+
+.carousel-caption p,
+.carousel-caption h3 {
+  color: white !important;
 }
 

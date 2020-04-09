@@ -314,14 +314,16 @@ select option:hover{
 }
 
 .myLoadDiv1{
-    display:flex;background-color: #ffffff;width: 100%;height: 100%;top: 0;position: fixed;left: 0;
+    display:flex;background-color: #ffffff;width: 100%;height: 100%;
+    top: 40%;
+    position: fixed;
+    left: 20%;
 }
 .myLoadDiv2{
-    margin: auto;
     width: 100%;
 }
 .myLoadDiv3{
-padding-left: 20%;
+padding-left: 45%;
 }
 
 .banner-height{
