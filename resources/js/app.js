@@ -116,6 +116,8 @@ Vue.component(VueCropper);
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('customer-register', require('./components/Users/CustomerRegister.vue').default);
+Vue.component('small-reg', require('./components/Users/SmallReg.vue').default);
+Vue.component('customer-form', require('./components/Users/CustomerForm.vue').default);
 Vue.component('slider', require('./components/Slider.vue').default);
 let routes = [
     {path:'/', component: require('./components/Welcome.vue').default},

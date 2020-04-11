@@ -40,6 +40,7 @@
 
 
            </div>
+           <customer-form></customer-form>
        </div>
 
         <div class="animated slower myLoadDiv1" :class="true ? 'zoomOut':''" v-if="pageLoader">
@@ -50,6 +51,7 @@
 
             </div>
         </div>
+
     </div>
 
 
@@ -57,6 +59,9 @@
     <script src="{{ asset('jquery.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
+        function createUser() {
+
+        }
     </script>
 @yield('script')
 </body>

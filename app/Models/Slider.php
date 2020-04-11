@@ -4,6 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @method create(array $data)
+ * @method static find(int $id)
+ */
 class Slider extends Model
 {
     //fillables

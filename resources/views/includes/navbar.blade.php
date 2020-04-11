@@ -22,12 +22,11 @@
                 <li class="nav-item">
                     <router-link to="/contact-us" class="nav-link myNav text-aplus">Contact</router-link>
                 </li>
-
                 <li class="nav-item">
                     <router-link to="/market-place" class="nav-link myNav text-aplus">Market Place</router-link>
                 </li>
-
             </ul>
+            <small-reg class="d-lg-none btn btn-sm"></small-reg>
 
         </div>
 

@@ -51,16 +51,16 @@
         <div id="sticky-header" class="main-header-area">
             <div class="container">
                 <div class="white_bg_bar">
-                    <div class="logo">
+                   {{-- <div class="logo">
                         <router-link to="/" id="logo-mini" class="d-none">
-                            {{--logo mini is placed here--}}
+                            --}}{{--logo mini is placed here--}}{{--
                         </router-link>
-                    </div>
+                    </div>--}}
                     <div class="row align-items-center justify-content-center">
-                        <div class="col-12 d-lg-none">
+                        <div class="col-12">
                             <div class="logo ">
                                 {{--<router-link to="/" id="logo-mini">
-                                    --}}{{--logo mini is placed here--}}{{--
+
                                 </router-link>--}}
                             </div>
                         </div>

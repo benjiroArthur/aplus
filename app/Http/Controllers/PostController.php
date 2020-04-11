@@ -8,6 +8,11 @@ use Intervention\Image\Facades\Image;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        return $this->middleware('auth')->except('index');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -104,7 +109,39 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //validation
+        $this->validate($request, [
+            'title' => 'Required',
+            'description' => 'required'
+        ]);
+
+        $post = Post::findOrFain($id);
+        if($request->hasFile('image')){
+            //validate
+            $this->validate($request, [
+                'image' => 'image|mimes:jpeg,png,jpg,gif,svg'
+            ]);
+
+            $image_file = $request->file('image');
+            //Get just extension
+            $extension = $image_file->getClientOriginalExtension();
+
+            //Filename to store
+            $image_name = time().'.'.$extension;
+
+            //store file
+            $image_path = public_path().'/assets/img/post/'.$image_name;
+            //resize image
+            Image::make($image_file->getRealPath())->resize(122,40)->save($image_path);
+        }
+
+        $data = $request->except('image');
+        if($request->hasFile('image')){
+            $data['image'] = $image_name;
+        }
+
+        $post->update($data);
+        return response('success');
     }
 
     /**
@@ -115,6 +152,9 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //delete post
+        $post = Post::findOrFail($id);
+        $post->delete();
+        return response('success');
     }
 }

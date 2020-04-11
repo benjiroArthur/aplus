@@ -24,6 +24,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/info', 'CompanyInfoController');
 Route::resource('/slider', 'SliderController');
+Route::resource('/customer', 'CustomerController');
+Route::resource('/order', 'OrderController');
+Route::resource('/post', 'PostController');
+Route::resource('/product', 'ProductController');
+Route::resource('/project', 'ProjectController');
+Route::resource('/transaction', 'TransactionController');
 
 
 

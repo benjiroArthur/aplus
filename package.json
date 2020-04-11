@@ -33,6 +33,7 @@
         "bootstrap-datetime-picker": "^2.4.4",
         "bootstrap-table": "^1.16.0",
         "bootstrap-vue": "^2.11.0",
+        "flat-icons": "^1.0.0",
         "icons": "^1.0.0",
         "laravel-echo": "^1.6.1",
         "laravel-vue-datatable": "^0.5.7",

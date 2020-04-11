@@ -17,6 +17,11 @@ $fa-font-path: "../webfonts";
 @import "~@fortawesome/fontawesome-free/scss/regular.scss";
 @import "~pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css";
 
+@import "~flat-icons/ecommerce.css";
+@import "~flat-icons/interface.css";
+@import "~flat-icons/technology.css";
+@import "~flat-icons/creative.css";
+
 
 //mdi
 @import '~@mdi/font/scss/materialdesignicons';
@@ -38,6 +43,14 @@ $fa-font-path: "../webfonts";
     background-color: rgba(1, 1, 1, .5) !important;
     color: white !important;
     border-radius: 30px;
+    //
+    z-index:10;
+    text-align:center;
+    top:65%;
+    bottom:auto;
+    -webkit-transform:translate(0, -50%);
+    -ms-transform:translate(0, -50%);
+    transform:translate(0, -50%);
 }
 .carousel-caption p,
 .carousel-caption h3{
