@@ -62,7 +62,10 @@ class SliderController extends Controller
             Image::make($image_file->getRealPath())->resize(1920,850)->save($image_path);
         }
 
-        $data = $request->except('image');
+        $data = [
+            'title' => strtoupper($request->title),
+            'description' => ucwords($request->description, ' ')
+        ];
         if($request->hasFile('image')){
             $data['image'] = $image_name;
         }
@@ -102,7 +105,50 @@ class SliderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $data = [
+            'title' => strtoupper($request->title),
+            'description' => ucwords($request->description, ' ')
+        ];
+        $slide = Slider::find($id);
+        $slide->update($data);
+        return response('success');
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function updateImage(Request $request, $id)
+    {
+        if($request->hasFile('image')){
+            //validate
+            $this->validate($request, [
+                'image' => 'image|mimes:jpeg,png,jpg,gif,svg'
+            ]);
+
+            $image_file = $request->file('image');
+            //Get just extension
+            $extension = $image_file->getClientOriginalExtension();
+
+            //Filename to store
+            $image_name = 'banner_'.time().'.'.$extension;
+
+            //store file
+            $image_path = public_path().'/assets/img/banner/'.$image_name;
+            //resize image
+            Image::make($image_file->getRealPath())->resize(1920,850)->save($image_path);
+            $slide = Slider::find($id);
+            $slide->image = $image_name;
+            $slide->save();
+            return response('success');
+        }
+       else{
+           return response('no file selected');
+       }
     }
 
     /**

@@ -15,7 +15,7 @@ require('@fortawesome/fontawesome-free/js/all.js');
 window.Fire = new Vue();
 
 import VueRouter from 'vue-router';
-import axios from "axios";
+//import axios from "axios";
 import { VuejsDatatableFactory } from 'vuejs-datatable';
 
 Vue.use(VueRouter, axios, VuejsDatatableFactory);
@@ -103,6 +103,15 @@ import VueCropper from 'vue-cropperjs';
 import 'cropperjs/dist/cropper.css';
 Vue.component(VueCropper);
 
+import VueMq from 'vue-mq';
+Vue.use(VueMq, {
+    breakpoints: {
+        sm: 760,
+        md: 1250,
+        lg: Infinity,
+    }
+});
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -119,12 +128,24 @@ Vue.component('customer-register', require('./components/Users/CustomerRegister.
 Vue.component('small-reg', require('./components/Users/SmallReg.vue').default);
 Vue.component('customer-form', require('./components/Users/CustomerForm.vue').default);
 Vue.component('slider', require('./components/Slider.vue').default);
+Vue.component('type-effect', require('./components/TypeEffect.vue').default);
+Vue.component('custom-footer', require('./components/CustomFooter.vue').default);
 let routes = [
     {path:'/', component: require('./components/Welcome.vue').default},
     {path:'/about', component: require('./components/Users/About.vue').default},
     {path:'/news', component: require('./components/Users/News.vue').default},
+    {path:'/project', component: require('./components/Users/Project.vue').default},
     {path:'/contact-us', component: require('./components/Users/Contact.vue').default},
     {path:'/market-place', component: require('./components/Users/Market.vue').default},
+
+    //admin
+    {path:'/admin/dashboard', component: require('./components/Admin/Dashboard.vue').default},
+    {path:'/admin/info', component: require('./components/Admin/Info.vue').default},
+    {path:'/admin/post', component: require('./components/Admin/Post.vue').default},
+    {path:'/admin/product', component: require('./components/Admin/Product.vue').default},
+    {path:'/admin/project', component: require('./components/Admin/Project.vue').default},
+    {path:'/admin/transaction', component: require('./components/Admin/Transaction.vue').default},
+
 ];
 
 /**
@@ -142,19 +163,6 @@ const router = new VueRouter({
 const app = new Vue({
     el: '#app',
     router,
-    data: () => ({
-        pageLoader: true,
-    }),
-    mounted() {
-        setTimeout(val => {
-            this.pageLoader = false;
-        }, 4000);
-
-    },
-    created(){
-       // const $userId = $('meta[name = "user-id"]').attr('content')
-        //Vue.prototype.$userId = document.querySelector("meta[name='user-id']").getAttribute('content');
-    },
 });
 
 router.beforeResolve((to, from, next)=>{

@@ -16,7 +16,7 @@
                         <input v-model="form.name" type="text" name="name"
                                class="form-control" :class="{ 'is-invalid': form.errors.has('name') }">
                         <has-error :form="form" field="name"></has-error>
-                    </div>
+                        </div>
 
                         <div class="form-group">
                             <label>Email</label>

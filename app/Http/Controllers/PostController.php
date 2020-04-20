@@ -21,7 +21,7 @@ class PostController extends Controller
     public function index()
     {
         //all posts
-        $post = Post::all();
+        $post = Post::latest();
         return response()->json($post);
     }
 

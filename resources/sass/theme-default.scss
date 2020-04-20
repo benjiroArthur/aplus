@@ -7,7 +7,7 @@ body {
 	font-family: $font1;
 	font-weight: normal;
     font-style: normal;
-    
+
 }
 
 .img {
@@ -208,10 +208,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5db2ff', end
 /* button style */
 .owl-carousel {
 	.owl-nav div {
-		background: transparent;
-		height: 50px;
-		left: 0px;
-		// opacity: 0;
+		//background: transparent;
+		height: 40px;
+		//left: 0px;
+		 //opacity: 0;
 		position: absolute;
 		text-align: center;
 		top: 50%;
@@ -221,17 +221,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5db2ff', end
 		-webkit-transition: all 0.3s ease 0s;
 		-o-transition: all 0.3s ease 0s;
 		transition: all 0.3s ease 0s;
-		// visibility: hidden;
-		width: 50px;
-		color: #707070;
-		background-color: transparent;
+		//visibility: hidden;
+		width: 40px;
+		//color: #707070;
+		background: #ffffff;
 		@include border-radius(50%);
-		left: 50px;
-		font-size: 15px;
-		line-height: 50px;
-		border: 1px solid #4D6174;
-		left: 150px;
-		color: #fff;
+		//left: 50px;
+		font-size: 40px;
+		line-height: 40px;
+		border: 1px solid #1EB40C;
+        border-radius: 50px !important;
+		left: -20px;
+		color: #1EB40C !important;
 	}
 	.owl-nav{
 		div{
@@ -239,14 +240,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5db2ff', end
 				// left: 86px;
 				// right: auto;
 				left: auto;
-				right: 150px;
+				right: -20px;
+                text-align: center;
 				i{
 					position: relative;
 					right: 0;
+
 					// top: 1px;
 				}
 			}
 			&.owl-prev{
+                text-align: center;
 				i{
 					position: relative;
 					// right: 1px;
@@ -261,13 +265,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5db2ff', end
 				opacity: 1;
 				visibility: visible;
 				&:hover{
-					color: #fff;
-					background: #001D38;
+					color: #fff !important;
+					background: #1EB40C;
 					border: 1px solid transparent ;
 				}
 			}
 		}
 	}
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 80px;
+
+    .owl-dot {
+        height: 14px;
+        width: 14px;
+        background: #eeeeee;
+        display: inline-block;
+        margin-right: 7px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        &.active {
+            span{
+                color: #1EB40C !important;
+            }
+
+        }
+    }
 }
 
 .mb-20px{

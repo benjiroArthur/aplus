@@ -17,6 +17,9 @@
                     <router-link to="/news" class="nav-link myNav text-aplus">News</router-link>
                 </li>
                 <li class="nav-item">
+                    <router-link to="/project" class="nav-link myNav text-aplus">Projects</router-link>
+                </li>
+                <li class="nav-item">
                     <router-link to="/about" class="nav-link myNav text-aplus">About</router-link>
                 </li>
                 <li class="nav-item">

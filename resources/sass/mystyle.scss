@@ -335,6 +335,13 @@ padding-left: 45%;
     border-radius: 30px !important;
 
 }
+.pattern_img{
+/*position: absolute; transform: translate(-30%, -400%); -ms-transform: translate(-30%, -400%);*/
+    position: absolute;
+    top: -50px;
+    left: -18px;
+    z-index: 2;
+}
 
 
 //::-moz-placeholder{

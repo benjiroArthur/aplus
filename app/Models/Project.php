@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @method create(array $all)
  * @method static find($id)
+ * @method static latest()
+ *
  */
 class Project extends Model
 {

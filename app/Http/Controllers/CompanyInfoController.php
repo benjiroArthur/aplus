@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CompanyInfo;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 use Intervention\Image\Facades\Image;
 
 class CompanyInfoController extends Controller
@@ -39,7 +40,7 @@ class CompanyInfoController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws ValidationException
      */
     public function store(Request $request)
     {
@@ -153,7 +154,8 @@ class CompanyInfoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       //
+
     }
 
     /**
@@ -169,4 +171,5 @@ class CompanyInfoController extends Controller
         $info->delete();
         return response('success');
     }
+
 }

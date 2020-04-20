@@ -6,7 +6,8 @@
                 <div class="row align-items-center">
                     <div class="col-xl-5 col-md-5 ">
                         <div class="header_left">
-                            <p>A-Plus Quality Engineering Services & Steel Trust Services</p>
+                            {{--<p>A-Plus Quality Engineering Services & Steel Trust Services</p>--}}
+                            <type-effect></type-effect>
                         </div>
                     </div>
                     <customer-register></customer-register>
